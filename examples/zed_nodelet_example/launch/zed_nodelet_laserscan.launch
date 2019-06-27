@@ -49,6 +49,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
     <!-- push pointcloud_to_laserscan nodelet into sensor's nodelet manager-->
+
+<!-- 
         <node pkg="nodelet" type="nodelet" name="pointcloud_to_laserscan" args="load pointcloud_to_laserscan/pointcloud_to_laserscan_nodelet zed_nodelet_manager">
 	     <remap from="cloud_in" to="$(arg zed_node_name)/point_cloud/cloud_registered"/>
              <remap from="scan" to="$(arg camera_model)/point_cloud_scan"/>
@@ -56,9 +58,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              <param name="target_frame"    	value="zed_left_camera_frame"/>
              <param name="min_height"      	value="-0.45"/>
              <param name="max_height"      	value="1.5"/>
-             <param name="angle_min"       	value="-1.5708"/>  <!--   -M_PI/2 -->
-             <param name="angle_max"       	value="1.5708"/>   <!--    M_PI/2 -->
-             <param name="angle_increment" 	value="0.0087"/>   <!--   M_PI/360.0-->
+             <param name="angle_min"       	value="-1.5708"/> 
+             <param name="angle_max"       	value="1.5708"/>  
+             <param name="angle_increment" 	value="0.0087"/>  
              <param name="scan_time"       	value="0.3333"/>
              <param name="range_min"       	value="0.40"/>
              <param name="range_max"       	value="5.0"/>
@@ -68,7 +70,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  
     	</node>
 
-
+-->
 
 	<node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection zed_nodelet_manager">
 	        <remap from="cloud"                     to="$(arg zed_node_name)/point_cloud/cloud_registered"/>
