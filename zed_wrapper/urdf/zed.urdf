@@ -25,7 +25,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <joint name="zed_camera_center_joint" type="fixed">
         <parent link="mid_mount"/>
         <child link="zed_camera_center"/>
-        <origin xyz="0 0 0.47" rpy="0 0 0" />
+        <origin xyz="-0.02 0 0.33" rpy="0 0 0" />
     </joint>
 
     <link name="zed_camera_center">
